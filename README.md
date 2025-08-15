@@ -131,7 +131,47 @@ If the external captive portal is also the radius server.
 RADIUS Attributes
 In Access-Request the following attributes must be supported for the “ale” vendor type.
 
-![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/test.jpg)
+![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_attributes.JPG)
+
+Other standard attributes are also included, but they should not be used for any decision making in the external Radius server.
+For example: NAS-IP-Address, NAS-Identifier, NAS-Port-Type
+
+Same, Alcatel VSA attributes are included, but they should not be used for any decision making in the external Radius server. For display purposes, we can provide the dictionary.alcatel file.
+
+ * The external captive portal solution must support the Called-Station-ID “apmac:SSID” 
+
+ * The external captive portal solution should not impose a fixed MAC address format  
+
+Access-Accept RADIUS Attributes
+
+In MAC and Portal Authentication, the Access Point supports the following attributes:
+![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_accept_attributes.JPG)
+
+RADIUS Accounting
+
+No additional requirement for RADIUS accounting.
+Similar to Access-Request, the following attributes must be supported for the “ale” vendor type.
+![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_accounting.JPG)
+
+Accounting attributes
+The Access point supports the standard attributes in the Start, Interim and Stop Request
+*	User-Name:		This is user-name provided in the Access-Accept
+*	Acct-Session-ID:		This is unique per session
+*	Acct-Input-Octets
+*	Acct-Input-Gigawords
+*	Acct-Input-Packets
+*	Acct-Output-Octets
+*	Acct-Output-Gigawords
+*	Acct-Output-Packets
+*	Acct-Session-Time
+*	Acct-Terminate-Cause (only in Stop)
+
+Other standard attributes or Alcatel VSA are also included, but they should not be used for any decision making in the external Radius server. For example: NAS-IP-Address, NAS-Identifier, NAS-Port-Type
+
+ * The external captive portal solution must support the Called-Station-ID “apmac:SSID” 
+
+ * The external captive portal solution should not impose a fixed MAC address format  
+
 
 
 ## 📦 Releases
