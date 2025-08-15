@@ -1,7 +1,7 @@
 
 # External Captive Portal (ExtCP) for Alcatel-Lucent OmniAccess Stellar WLAN
 
-**ExtCP** is a basic implementation of captive portal for Alcatel-Lucent OmniSwitch Stellar WLAN.  The code is writing in python.
+**ExtCP** is a basic implementation of captive portal for Alcatel-Lucent OmniSwitch Stellar WLAN.  The code is written in python.
 
 ---
 
