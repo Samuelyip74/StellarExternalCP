@@ -73,10 +73,10 @@ When the user joined the wireless network, it will be automatically redirected t
 login page.  The administrator has to configure the redirect URL in the stellar access point.
 
 On the Access Point, the redirect URL is configured with:
-•	Server IP or FQDN
+*	Server IP or FQDN
 Ex: 192.168.28.1
-•	HTTP or HTTPS mode
-•	Redirect URL
+*	HTTP or HTTPS mode
+*	Redirect URL
 This is actually the URI and must have the vendor profile/type reference to match the vendor profile in the external captive portal solution.
 Ex: /login/ale
 
@@ -119,11 +119,11 @@ The Access Point always responds with HTTP 200 OK, irrespective of the RADIUS re
 The HTTP 200 OK simply specifies a new URL to load on the browser.
 
 The URL is constructed as follow:
-•	Radius authentication passed
+*	Radius authentication passed
 The URL is the “url” specified in the form 
-•	Radius authentication failed
-o	If the form has the “onerror” attribute, the URL is the value of this attribute
-o	If the form does not have the “onerror” attribute, the URL is the original redirection URL with all the URL parameters and appended with the “errmsg=Failure” parameter.
+*	Radius authentication failed
+    +	If the form has the “onerror” attribute, the URL is the value of this attribute
+    +	If the form does not have the “onerror” attribute, the URL is the original redirection URL with all the URL parameters and appended with the “errmsg=Failure” parameter.
 
 
 If the external captive portal is also the radius server.
