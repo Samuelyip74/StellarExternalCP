@@ -94,10 +94,10 @@ The following parameters are automatically added by the AP in the redirection UR
 | errmsg             | Fixed value (i.e. Failure)               | (i.e "authentication failure")        |
 
 
-Login POST Processing
+### Login POST Processing
 The external captive portal page provides a Login POST to the client browser.
 
-Login POST Target / Post Action
+### Login POST Target / Post Action
 The Login POST is always targeted to the Access Point.
 The form action must be: http(s)://cportal.al-enterprise.com/login
 The HTTP or HTTPS mode should solely be determined by the external captive portal server, based on its internal needs to secure the form submission to the AP.
@@ -114,7 +114,7 @@ password	The password
 url	        The “landing” URL when authentication passed	
 onerror	    The “landing” URL when the authentication failed	Optional 
 
-POST Response
+### POST Response
 The Access Point always responds with HTTP 200 OK, irrespective of the RADIUS request results.
 The HTTP 200 OK simply specifies a new URL to load on the browser.
 
@@ -128,7 +128,7 @@ The URL is the “url” specified in the form
 
 If the external captive portal is also the radius server.
 
-RADIUS Attributes
+### RADIUS Attributes
 In Access-Request the following attributes must be supported for the “ale” vendor type.
 
 ![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_attributes.JPG)
@@ -142,18 +142,17 @@ Same, Alcatel VSA attributes are included, but they should not be used for any d
 
  * The external captive portal solution should not impose a fixed MAC address format  
 
-Access-Accept RADIUS Attributes
-
+### Access-Accept RADIUS Attributes
 In MAC and Portal Authentication, the Access Point supports the following attributes:
 ![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_accept_attributes.JPG)
 
-RADIUS Accounting
+### RADIUS Accounting
 
 No additional requirement for RADIUS accounting.
 Similar to Access-Request, the following attributes must be supported for the “ale” vendor type.
 ![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/radius_accounting.JPG)
 
-Accounting attributes
+### Accounting attributes
 The Access point supports the standard attributes in the Start, Interim and Stop Request
 *	User-Name:		This is user-name provided in the Access-Accept
 *	Acct-Session-ID:		This is unique per session
