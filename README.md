@@ -131,6 +131,8 @@ If the external captive portal is also the radius server.
 RADIUS Attributes
 In Access-Request the following attributes must be supported for the “ale” vendor type.
 
+![Imgur Image](https://github.com/Samuelyip74/StellarExternalCP/blob/main/images/test.jpg)
+
 
 ## 📦 Releases
 
